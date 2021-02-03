@@ -1,5 +1,7 @@
 package jx.nc.achilsh.demo20210202.Busi;
 
+
+import jx.nc.achilsh.demo20210202.AutoWireDemo.AWDemo;
 import jx.nc.achilsh.demo20210202.NoComponentScan.NCptScan;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -16,8 +18,9 @@ public class Computer {
     private Mouse ms;
     private Keyboard kb;
 
-    @Autowired(required =  true)
+    @Autowired(required =  false) //Need set true
     private NCptScan oneScan;
+
 
     public Computer(Mouse m, Keyboard kb) {
         this.ms = m;

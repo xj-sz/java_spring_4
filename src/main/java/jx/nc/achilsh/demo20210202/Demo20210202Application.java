@@ -1,5 +1,6 @@
 package jx.nc.achilsh.demo20210202;
 
+import jx.nc.achilsh.demo20210202.AutoWireDemo.AWDemo;
 import jx.nc.achilsh.demo20210202.Busi.*;
 import jx.nc.achilsh.demo20210202.Cfg.*;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,11 @@ public class Demo20210202Application {
         Computer computer=(Computer)applicationContext.getBean("computer");
         computer.say();
 
+        ///
+        ApplicationContext autoDemo = new AnnotationConfigApplicationContext( AWDemo.class);
+
+        AWDemo demoAW = (AWDemo) autoDemo.getBean("awdemoSvr");
+        demoAW.mycall ();
 
         SpringApplication.run ( Demo20210202Application.class , args );
 
