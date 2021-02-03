@@ -2,10 +2,13 @@ package jx.nc.achilsh.demo20210202;
 
 import jx.nc.achilsh.demo20210202.Busi.*;
 import jx.nc.achilsh.demo20210202.Cfg.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 public class Demo20210202Application {
@@ -27,6 +30,7 @@ public class Demo20210202Application {
 
         Computer computer=(Computer)applicationContext.getBean("computer");
         computer.say();
+
 
         SpringApplication.run ( Demo20210202Application.class , args );
 

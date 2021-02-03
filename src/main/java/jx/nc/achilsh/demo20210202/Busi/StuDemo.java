@@ -7,6 +7,6 @@ public class StuDemo implements  DefineDemo {
     private int x;
     @Override
     public void display() {
-        log.info("display: " + StuDemo.class);
+        log.info("00000000000000000display: " + StuDemo.class);
     }
 }
